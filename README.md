@@ -1,3 +1,1 @@
-# 362Project
-# Allen Rivas
-# Gerardo Pena
+# 362Project DaHub
