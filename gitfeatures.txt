@@ -1,0 +1,6 @@
+git branch
+git branch "feature"
+git checkout "feature" 
+git add
+git commit -m "message"
+git commit -am "added anther line"
