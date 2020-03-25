@@ -1,11 +1,11 @@
 body{
   font-family: 'Prompt', sans-serif;
-  background-color: rgb(10,8,56);
+  background-color: black;
   text-align: center;
-  color:white;
-  border-right: 30px solid cyan;
-  border-bottom: 30px solid cyan;
-  border-left: 30px solid cyan;
+  color: rgb(255,163,26);
+  border-right: 30px solid rgb(255,163,26);
+  border-bottom: 30px solid rgb(255,163,26);
+  border-left: 30px solid rgb(255,163,26);
   margin: 0px;
 }
 
@@ -19,7 +19,7 @@ p{
   padding-right: 300px;
 }
 
-.signup input{
+.flightSearch input{
   margin-bottom: 10px;
 }
 
@@ -29,7 +29,7 @@ input{
 
 button{
   color:black;
-  background-color: orange;
+  background-color: rgb(128,128,128);
   height: 50px;
   width: 100px;
   border-radius: 12px;
