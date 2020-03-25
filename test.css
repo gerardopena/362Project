@@ -1,0 +1,36 @@
+body{
+  font-family: 'Prompt', sans-serif;
+  background-color: rgb(10,8,56);
+  text-align: center;
+  color:white;
+  border-right: 30px solid cyan;
+  border-bottom: 30px solid cyan;
+  border-left: 30px solid cyan;
+  margin: 0px;
+}
+
+#first{
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+
+p{
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
+.signup input{
+  margin-bottom: 10px;
+}
+
+input{
+  width:20%;
+}
+
+button{
+  color:black;
+  background-color: orange;
+  height: 50px;
+  width: 100px;
+  border-radius: 12px;
+}
