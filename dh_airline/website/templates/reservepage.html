@@ -1,0 +1,11 @@
+{ extends "website/website_base.html"}
+{% block body_block%}
+    <h1>Flights</h1>
+    <ul>
+        {% for flight in flights.Flight %}
+        <li>
+            {{ Flight.origin }}
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
