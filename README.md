@@ -6,4 +6,4 @@ Brandon Le              le.brandon350@gmail.com
 
 Jeremy Viray            jetemy@gmail.com
 
-kyle ear                kyleear@csu.fullerton.edu
+Kyle Ear                kyleear@csu.fullerton.edu
