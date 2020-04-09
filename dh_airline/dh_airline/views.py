@@ -4,7 +4,7 @@ from django.views.generic import View, TemplateView, ListView, CreateView, Delet
 from flights.models import Flight
 # Create your views here.
 
-class IndexView(TemplateView):
+class HomePage(TemplateView):
     template_name='homepage.html'
     
     def get_context_data(self, **kwargs):
@@ -13,8 +13,8 @@ class IndexView(TemplateView):
         return context
 
 
-class WebsiteReserveView(ListView):
-    template_name = 'website/reservepage.html'
+class MyTripsPage(ListView):
+    template_name = 'website/templates/mytrips_page/mytrips.html'
     context_object_name = 'flights'
     model = Flight
 
