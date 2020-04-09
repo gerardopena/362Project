@@ -20,5 +20,7 @@ from website import views
 
 urlpatterns = [
     path('', include('website.urls', namespace='website')),
-    path('admin/', admin.site.urls)
+    path('admin/', admin.site.urls),
+    path('accounts/', include('accounts.urls', namespace='accounts')),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]

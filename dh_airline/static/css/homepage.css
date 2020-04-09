@@ -1,0 +1,27 @@
+#bookContainer{
+  margin-top: 130px;
+  margin-left: 0px;
+  margin-right: 90px;
+}
+
+#bookJumbo{
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: rgba(112, 123, 128, 0.75);
+  border: 1px solid black;
+  position:relative;
+  left:50px;
+  margin-top: 50px;
+}
+
+#bookHeader{
+  margin-top: -20px;
+  margin-bottom: 30px;
+}
+
+#bookForm{
+   height: 40px;
+}
+
+.rounded{
+   border-radius:20px;
+}
