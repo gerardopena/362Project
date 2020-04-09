@@ -13,8 +13,11 @@ class HomePage(TemplateView):
         return context
 
 
-class MyTripsPage(ListView):
-    template_name = 'website/templates/mytrips_page/mytrips.html'
-    context_object_name = 'flights'
-    model = Flight
+class MyTripsPage(TemplateView):
+    template_name = 'mytrips.html'
 
+class LogIn(TemplateView):
+    template_name = 'login.html'
+
+class LogOut(TemplateView):
+    template_name = 'logout.html'
