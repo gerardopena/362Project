@@ -6,6 +6,8 @@
     <title>Flight Hub</title>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
       <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
+      {% block css_block %}
+      {% endblock %}
   </head>
   <body>
 
@@ -55,7 +57,7 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#"><img src="{% static "images/DH_LOGO.png" %}" style="width: 100px; margin-top:15px;"> </a>
+            <a class="navbar-brand" href={% url 'website:homepage' %}"><img src="{% static "images/DH_LOGO.png" %}" style="width: 100px; margin-top:15px;"> </a>
 
            </div> <!-- end header -->
 
@@ -85,6 +87,9 @@
         </div> <!-- end container-fluid-->
 
       </nav>
+
+      {% block body_block %}
+      {% endblock %}
 
       
 
