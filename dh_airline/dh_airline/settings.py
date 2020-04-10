@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts.apps.AccountsConfig',
     'flights.apps.FlightsConfig',
+    'bootstrap3',
+    'accounts',
+
 ]
 
 MIDDLEWARE = [

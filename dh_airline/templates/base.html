@@ -10,36 +10,7 @@
       {% endblock %}
   </head>
   <body>
-
-    <style>
-    body{
-      background-image: url(https://pics.freeartbackgrounds.com/Sky_with_Clouds_and_Airplane_Background-1482.jpg);
-      background-size: cover ;
-      background-repeat: no-repeat;
-      /* background-position: center center; */
-      /* background-attachment: fixed; */
-      background-color: white;
-
-      border-right: 10px solid black;
-    }
-
-
-.navbar-brand,
-.navbar-right li a {
-    line-height: 50px;
-    height: 100px;
-    padding-top: 0;
-    font-size: 20px;
-}
-
-
-.navbar{
-  background-color: rgba(0,0,0,0.65);
-
-}
-
-    </style>
-
+  <link rel="stylesheet" href="{% static 'css/master.css'%}">
       <!-- Navbar -->
       <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
         <!-- container-fluid to make sure navbar spans entire screen -->
@@ -91,7 +62,7 @@
       {% block body_block %}
       {% endblock %}
 
-      
+
 
       <script
       src="http://code.jquery.com/jquery-3.1.1.js"
