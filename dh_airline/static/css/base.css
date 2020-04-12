@@ -1,11 +1,8 @@
 body{
-  background-image: url(https://pics.freeartbackgrounds.com/Sky_with_Clouds_and_Airplane_Background-1482.jpg);
   background-size: cover ;
   background-repeat: no-repeat;
   /* background-position: center center; */
   /* background-attachment: fixed; */
-  background-color: white;
-
   border-right: 10px solid black;
 }
 
@@ -16,6 +13,7 @@ line-height: 50px;
 height: 100px;
 padding-top: 0;
 font-size: 20px;
+
 }
 
 
