@@ -21,3 +21,6 @@ class LogIn(TemplateView):
 
 class LogOut(TemplateView):
     template_name = 'logout.html'
+
+class BookPage(TemplateView):
+    template_name = 'bookpage.html'

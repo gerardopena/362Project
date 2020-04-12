@@ -40,8 +40,8 @@
             <!--Links-->
             <ul class="nav navbar-nav navbar-right">
 
+              <li><a href="{% url 'bookpage' %}">Book</a> </li>
               <li><a href="#">My Trips</a></li>
-              <li><a href="#">Search</a> </li>
               <li><a href="#">Cart</a></li>
 
               {% if user.is_authenticated %}
