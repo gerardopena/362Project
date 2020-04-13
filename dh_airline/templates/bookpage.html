@@ -1,8 +1,10 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
 
 <form>
     <div>
+            <label for="to" style="font-size:18px;">To:</label>
         <input name="country" list="countries" placeholder="Country">
         <datalist id="countries">
             <option value="Africa"></option>
@@ -11,4 +13,33 @@
         </datalist>
     </div>
 </form>
+
+<form>
+    <div class="form-group">
+      <label for="to" style="font-size:18px;">To:</label>
+      <input id="bookForm" class="form-control" type="text" name="to" placeholder="To*">
+    </div>
+
+    <div class="form-group">
+      <label for="from" style="font-size:18px;">From:</label>
+      <input id="bookForm" class="form-control" type="text" name="from" placeholder="Los Angeles">
+    </div>
+
+    <div class="form-group">
+      <label for="date" style="font-size:18px;">When:</label>
+      <input id="bookForm" class="form-control" type="date" name="date" value="">
+    </div>
+  </form>
+
+  <form>
+        <div>
+                <label for="to" style="font-size:18px;">To:</label>
+            <input name="country" list="countries" placeholder="Country">
+            <datalist id="countries">
+                <option value="Africa"></option>
+                <option value="Alaska"></option>
+        
+            </datalist>
+        </div>
+    </form>
 {% endblock %}
