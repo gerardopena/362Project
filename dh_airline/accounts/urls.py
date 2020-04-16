@@ -1,3 +1,6 @@
+# April 16, 2020
+# Kyle Ear
+# Gerardo Pena
 from django.urls import include, path
 from django.contrib.auth import views as auth_views
 from accounts.views import signup_view

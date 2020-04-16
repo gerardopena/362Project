@@ -1,4 +1,6 @@
-# Create your models here.
+# April 16, 2020
+# Kyle Ear
+# Gerardo Pena
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 

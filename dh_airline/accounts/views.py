@@ -1,3 +1,6 @@
+# April 16, 2020 
+# Kyle Ear
+# Gerardo Pena
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
 from accounts.forms import RegistrationForm
