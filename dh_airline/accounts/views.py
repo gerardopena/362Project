@@ -3,7 +3,7 @@
 # Gerardo Pena
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
-from accounts.forms import RegistrationForm
+from accounts.forms import RegistrationForm, AccountUpdateForm
 # Create your views here.
 
 def signup_view(request):
@@ -24,3 +24,27 @@ def signup_view(request):
 		form = RegistrationForm()
 		context['registration_form'] = form
 	return render(request, 'accounts/signup.html', context)
+
+
+def account_view(request):
+
+	if not request.user.is_authenticated:
+		return redirect("login")
+	
+	context = {}
+
+	if request.POST:
+		form = AccountUpdateForm(request.POST, instance=request.user)
+		if form.is_valid():
+			form.save()
+	else:
+		form = AccountUpdateForm(
+			initial= {
+				'email': request.user.email,
+				'username': request.user.username
+			}
+		)
+
+	context['account_form'] = form
+
+	return render(request, 'accounts/account.html', context)

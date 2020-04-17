@@ -48,6 +48,7 @@
 
               <!-- add in drop down list links for account settings, profile picture, etc-->
               <li><a href="{% url 'accounts:logout' %}">Log Out</a> </li>
+              <li><a href="{% url 'accounts:account' %}">Edit Account</a> </li>
 
               {% else %}
               <li><a href="{% url 'accounts:login' %}">Log In</a> </li>
