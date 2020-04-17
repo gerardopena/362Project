@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic import View, TemplateView, ListView, CreateView, DeleteView
-from flights.models import Flight
 # Create your views here.
 
 class HomePage(TemplateView):
@@ -21,3 +20,6 @@ class LogIn(TemplateView):
 
 class LogOut(TemplateView):
     template_name = 'logout.html'
+
+class BookPage(TemplateView):
+    template_name = 'bookpage.html'

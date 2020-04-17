@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+<<<<<<< HEAD
+<div>
+    <input name="country" list="countries" placeholder="Country">
+    <datalist id="countries">
+        <option value="africa"></option>
+
+    </datalist>
+</div>
+=======
+{% block content %}
+
+<h1>Test</h1>
+<ol>
+    {% for flight in flight_list %}
+        <h2><li>{{flight.origin}}</li></h2>
+    {% endfor %}
+</ol>
+{% endblock %}
+>>>>>>> ca5e11d5a916ffd9ffcbd5d3e233722db7a96c82
