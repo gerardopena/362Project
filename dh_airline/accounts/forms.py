@@ -8,7 +8,7 @@ from accounts.models import Account
 
 class RegistrationForm(UserCreationForm):
 	email = forms.EmailField(max_length=60, help_text="Required. Add a valid email address")
-	
+
 	class Meta:
 		model = Account
 		fields = ("email","username","password1","password2")
@@ -39,5 +39,3 @@ class AccountUpdateForm(forms.ModelForm):
 			except Account.DoesNotExist:
 				return username
 			raise forms.ValidationError('Username "%s" is already in use.' % account.username)
-
-	
