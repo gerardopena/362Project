@@ -40,7 +40,11 @@
             <!--Links-->
             <ul class="nav navbar-nav navbar-right">
 
+<<<<<<< HEAD
               <li><a href="{%url 'flights:bookpage'%}">Book</a> </li>
+=======
+              <li><a href="{% url 'flights:bookpage' %}">Book</a> </li>
+>>>>>>> 6f0b67c2a36b44a2b0b3a19758e56c0b42930763
               <li><a href="#">My Trips</a></li>
               <li><a href="#">Cart</a></li>
 
@@ -48,6 +52,7 @@
 
               <!-- add in drop down list links for account settings, profile picture, etc-->
               <li><a href="{% url 'accounts:logout' %}">Log Out</a> </li>
+              <li><a href="{% url 'accounts:account' %}">Edit Account</a> </li>
 
               {% else %}
               <li><a href="{% url 'accounts:login' %}">Log In</a> </li>

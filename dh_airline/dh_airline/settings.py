@@ -44,8 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
-    'accounts',
-    'flights',
+    'accounts.apps.AccountsConfig',
+    'flights.apps.FlightsConfig',
     'bootstrap3',
 
 ]
