@@ -1,4 +1,4 @@
-# April 16, 2020
+# April 16, 2020 
 # Kyle Ear
 # Gerardo Pena
 from django.shortcuts import render, redirect
@@ -27,9 +27,10 @@ def signup_view(request):
 
 
 def account_view(request):
+
 	if not request.user.is_authenticated:
 		return redirect("login")
-
+	
 	context = {}
 
 	if request.POST:
