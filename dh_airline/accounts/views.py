@@ -27,7 +27,6 @@ def signup_view(request):
 
 
 def account_view(request):
-
 	if not request.user.is_authenticated:
 		return redirect("login")
 	
