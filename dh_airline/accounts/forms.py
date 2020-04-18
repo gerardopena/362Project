@@ -3,6 +3,7 @@
 # Gerardo Pena
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import authenticate
 
 from accounts.models import Account
 
@@ -16,7 +17,7 @@ class RegistrationForm(UserCreationForm):
 class AccountUpdateForm(forms.ModelForm):
 	class Meta:
 		model = Account
-		fields = ('email','username')
+		fields = ('email','username','first_name')
 
 	def clean_email(self):
 		# check if email is available
@@ -24,7 +25,7 @@ class AccountUpdateForm(forms.ModelForm):
 			email = self.cleaned_data['email']
 			# check if account exists
 			try:
-				account = Account.objects.exclude(pk=self.instance.pk).get(email=email)
+				account = Account.object.exclude(pk=self.instance.pk).get(email=email)
 			except Account.DoesNotExist:
 				return email
 			raise forms.ValidationError('Email "%s" is already in use.' % account.email)
@@ -35,7 +36,18 @@ class AccountUpdateForm(forms.ModelForm):
 			username = self.cleaned_data['username']
 			# check if account exists
 			try:
-				account = Account.objects.exclude(pk=self.instance.pk).get(username=username)
+				account = Account.object.exclude(pk=self.instance.pk).get(username=username)
 			except Account.DoesNotExist:
 				return username
 			raise forms.ValidationError('Username "%s" is already in use.' % account.username)
+
+	def clean_first_name(self):
+		# check if email is available
+		if self.is_valid():
+			first_name = self.cleaned_data['first_name']
+			# check if account exists
+			try:
+				account = Account.object.exclude(pk=self.instance.pk).get(first_name=first_name)
+			except Account.DoesNotExist:
+				return first_name
+			
