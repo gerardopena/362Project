@@ -40,7 +40,7 @@ class AccountUpdateForm(forms.ModelForm):
 			except Account.DoesNotExist:
 				return username
 			raise forms.ValidationError('Username "%s" is already in use.' % account.username)
-
+	
 	def clean_first_name(self):
 		if self.is_valid():
 			first_name = self.cleaned_data['first_name']

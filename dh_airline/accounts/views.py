@@ -43,6 +43,11 @@ def account_view(request):
 				'email': request.user.email,
 				'username': request.user.username,
 				'first_name': request.user.first_name,
+				'last_name': request.user.last_name,
+				'street_address': request.user.street_address,
+				'city_address': request.user.city_address,
+				'state_address': request.user.state_address,
+				'zip_address': request.user.zip_address,
 			}
 		)
 	context['account_form'] = form
