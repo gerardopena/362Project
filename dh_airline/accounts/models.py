@@ -10,16 +10,16 @@ class MyAccountManager(BaseUserManager):
 			raise ValueError("Users must have an email address")
 		if not username:
 			raise ValueError("Users must have a username")
-		
+
 		user = self.model(
 			email=self.normalize_email(email),
 			username=username,
 		)
-		
+
 		user.set_password(password)
 		user.save(using=self._db)
 		return user
-		
+
 	def create_superuser(self,email,username,password):
 		user = self.create_user(
 			email = self.normalize_email(email),
@@ -31,7 +31,7 @@ class MyAccountManager(BaseUserManager):
 		user.is_superuser = True
 		user.save(using=self._db)
 		return user
-	
+
 class Account(AbstractBaseUser):
 	email = models.EmailField(verbose_name="email",max_length=60,unique=True)
 	username = models.CharField(max_length=30,unique=True)
@@ -43,24 +43,23 @@ class Account(AbstractBaseUser):
 	is_superuser = models.BooleanField(default=False)
 	# Above are required
 	# Can add further fields like first name, last name, address, cc#
-	first_name = models.CharField(max_length=30,null=True)
-	last_name  = models.CharField(max_length=30,null=True)
-	street_address = models.CharField(max_length=30,null=True)
-	city_address = models.CharField(max_length=30,null=True)
-	state_address = models.CharField(max_length=2,null=True)
-	zip_address = models.IntegerField(null=True)
+	first_name = models.CharField(max_length=30,default='',null=True,blank=True)
+	last_name  = models.CharField(max_length=30,default='',null=True,blank=True)
+	street_address = models.CharField(max_length=30,default='',null=True,blank=True)
+	city_address = models.CharField(max_length=30,default='',null=True,blank=True)
+	state_address = models.CharField(max_length=2,default='',null=True,blank=True)
+	zip_address = models.IntegerField(default='',null=True,blank=True)
 
 	USERNAME_FIELD = 'email'
 	REQUIRED_FIELDS = ['username']
-	
+
 	object = MyAccountManager()
-	
+
 	def __str__(self):
 		return self.email
-	
+
 	def has_perm(self,perm,obj=None):
 		return self.is_admin
-	
+
 	def has_module_perms(self, app_label):
 		return True
-		

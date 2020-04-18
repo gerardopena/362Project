@@ -41,10 +41,10 @@ def account_view(request):
 		form = AccountUpdateForm(
 			initial= {
 				'email': request.user.email,
-				'username': request.user.username
+				'username': request.user.username,
+				'first_name': request.user.first_name,
 			}
 		)
-
 	context['account_form'] = form
 
 	return render(request, 'accounts/account.html', context)
