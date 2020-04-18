@@ -1,4 +1,4 @@
-# April 16, 2020
+# April 18, 2020
 # Kyle Ear
 # Gerardo Pena
 from django.db import models
@@ -43,8 +43,13 @@ class Account(AbstractBaseUser):
 	is_superuser = models.BooleanField(default=False)
 	# Above are required
 	# Can add further fields like first name, last name, address, cc#
-	first_name = models.CharField(max_length=30)
-	
+	first_name = models.CharField(max_length=30,null=True)
+	last_name  = models.CharField(max_length=30,null=True)
+	street_address = models.CharField(max_length=30,null=True)
+	city_address = models.CharField(max_length=30,null=True)
+	state_address = models.CharField(max_length=2,null=True)
+	zip_address = models.IntegerField(null=True)
+
 	USERNAME_FIELD = 'email'
 	REQUIRED_FIELDS = ['username']
 	
