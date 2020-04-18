@@ -17,7 +17,7 @@ class RegistrationForm(UserCreationForm):
 class AccountUpdateForm(forms.ModelForm):
 	class Meta:
 		model = Account
-		fields = ('email','username','first_name')
+		fields = ('email','username','first_name','last_name',)
 
 	def clean_email(self):
 		# check if email is available
@@ -50,4 +50,13 @@ class AccountUpdateForm(forms.ModelForm):
 				account = Account.object.exclude(pk=self.instance.pk).get(first_name=first_name)
 			except Account.DoesNotExist:
 				return first_name
-			
+
+		def clean_last_name(self):
+			# check if email is available
+			if self.is_valid():
+				last_name = self.cleaned_data['last_name']
+				# check if account exists
+				try:
+					account = Account.object.exclude(pk=self.instance.pk).get(last_name=last_name)
+				except Account.DoesNotExist:
+					return last_name
