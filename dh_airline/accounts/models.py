@@ -43,12 +43,12 @@ class Account(AbstractBaseUser):
 	is_superuser = models.BooleanField(default=False)
 	# Above are required
 	# Can add further fields like first name, last name, address, cc#
-	first_name = models.CharField(max_length=30,null=True)
-	last_name  = models.CharField(max_length=30,null=True,blank=True)
-	street_address = models.CharField(max_length=30,null=True,blank=True)
-	city_address = models.CharField(max_length=30,null=True,blank=True)
-	state_address = models.CharField(max_length=2,null=True,blank=True)
-	zip_address = models.IntegerField(null=True,blank=True)
+	first_name = models.CharField(max_length=30,default='')
+	last_name  = models.CharField(max_length=30,default='')
+	street_address = models.CharField(max_length=30,default='')
+	city_address = models.CharField(max_length=30,default='')
+	state_address = models.CharField(max_length=2,default='')
+	zip_address = models.IntegerField(default=0)
 
 	USERNAME_FIELD = 'email'
 	REQUIRED_FIELDS = ['username']

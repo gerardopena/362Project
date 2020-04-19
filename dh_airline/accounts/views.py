@@ -37,6 +37,7 @@ def account_view(request):
 		form = AccountUpdateForm(request.POST, instance=request.user)
 		if form.is_valid():
 			form.save()
+			return redirect('homepage')
 	else:
 		form = AccountUpdateForm(
 			initial= {
