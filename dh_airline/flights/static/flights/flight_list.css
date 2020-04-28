@@ -1,0 +1,31 @@
+.totalresults{
+  padding-top: 10%;
+}
+h1{
+  font-size: 50px;
+}
+.results{
+  border: 2px solid black;
+  margin-bottom: 5px;
+}
+.resultsheader{
+  padding-top: 10px;
+}
+.reservebutton{
+  border: none;
+  float: right;
+  text-decoration: none;
+  font-size: 20px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-right: 24px;
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
+}
+
+.reservebutton:hover {
+  background-color: #008CBA;
+    text-decoration: none;
+  color: white;
+}

@@ -1,21 +1,28 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 
-<h1>Test</h1>
-<h1>Test</h1>
-<h1>Test</h1>
-<h1>Test</h1>
-<h1>Test</h1>
-<h1>Test</h1>
+<link rel="stylesheet" href="{% static 'flights/flight_list.css'%}">
+<div class="container">
+  <div class="totalresults">
+    <div class="destinationheader">
+      <h1> {{ orig }} <span class="glyphicon glyphicon-plane"></span>   {{ dest }}</h1>
+    </div>
+    <div class="resultsheader">
+        <h2> Results: </h2>
+    </div>
+    {%for flight in flights %}
+    <div class="results">
+      <ol>
+          <h2>
+              {{ flight }}
+              <button type="Submit"  class="reservebutton" name="button"><a href="{% url 'flights:detailpage' pk=flight.id%}">Reserve</a></button>
+          </h2>
+      </ol>
+    </div>
+        {%endfor%}
+  </div>
+</div>
 
-<h2> Origin: {{ orig }} Destination: {{ dest }}</h2>
-<h2> Results: </h2>
-{%for flight in flights %}
-<ol>
-    <h2>
-        <a href="{% url 'flights:detailpage' pk=flight.id%}">{{ flight }}</a>
-    </h2>
-</ol>
-    {%endfor%}
+
 {% endblock %}
