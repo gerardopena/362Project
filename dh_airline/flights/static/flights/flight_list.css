@@ -5,11 +5,19 @@ h1{
   font-size: 50px;
 }
 .results{
-  border: 2px solid black;
-  margin-bottom: 5px;
+  margin-top: 20px;
+  padding-bottom: 25px;
+
+}
+.destinationheader{
+  margin-bottom: 10px;
+}
+.titles{
+  padding-bottom: 30px;
 }
 .resultsheader{
   padding-top: 10px;
+  padding-bottom: 10px;
 }
 .reservebutton{
   border: none;

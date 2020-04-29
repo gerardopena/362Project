@@ -11,14 +11,39 @@
     <div class="resultsheader">
         <h2> Results: </h2>
     </div>
+    <div class="titles">
+        <div class="col-md-2">
+          Depart
+        </div>
+        <div class="col-md-2">
+          Depart
+        </div>
+        <div class="col-md-2">
+          Depart
+        </div>
+        <div class="col-md-2">
+          Depart
+        </div>
+    </div>
     {%for flight in flights %}
     <div class="results">
-      <ol>
-          <h2>
-              {{ flight }}
+
+            <div class="col-md-2">
+              {{ flight.origin }}
+            </div>
+            <div class="col-md-2">
+              {{ flight.destination }}
+            </div>
+              <div class="col-md-2">
+                {{ flight.duration }}
+              </div>
+            <div class="col-md-6">
               <button type="Submit"  class="reservebutton" name="button"><a href="{% url 'flights:detailpage' pk=flight.id%}">Reserve</a></button>
-          </h2>
-      </ol>
+
+            </div>
+
+
+
     </div>
         {%endfor%}
   </div>

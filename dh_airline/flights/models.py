@@ -27,6 +27,6 @@ class Flight(models.Model):
 class Confirmation(models.Model):
     confirmation = models.CharField(max_length=8)
     flight = models.ForeignKey(Flight, related_name='flight', on_delete=models.CASCADE)
-    
+
     def __str__(self):
         return self.name
