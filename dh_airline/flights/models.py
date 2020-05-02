@@ -10,6 +10,7 @@ class Flight(models.Model):
     duration = models.IntegerField()
     seats = 24
 
+
     def __str__(self):
         return f"{self.origin} to {self.destination} in {self.duration} minutes."
 
@@ -24,9 +25,22 @@ class Flight(models.Model):
             }
         )
 
-class Confirmation(models.Model):
-    confirmation = models.CharField(max_length=8)
+
+class FlightItems(models.Model):
+    
+    seats = 24
+    quanitity = models.IntegerField()
+    price = 199
     flight = models.ForeignKey(Flight, related_name='flight', on_delete=models.CASCADE)
 
-    def __str__(self):
-        return self.name
+    def get_absolute_url(self):
+        return reverse(
+            'flights:add',
+            kwargs={
+                "pk": self.pk
+
+            }
+        )
+
+class FlightObject(models.Model):
+    items = models.ManyToManyField(FlightItems)

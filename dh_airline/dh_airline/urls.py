@@ -30,6 +30,10 @@ urlpatterns = [
     path('login/', views.LogIn.as_view(), name='login'),
     path('logout/', views.LogOut.as_view(), name='logout'),
     path('book/', include("flights.urls", namespace="book")),
+<<<<<<< HEAD
 
+=======
+    path('cart/', include("cart.urls", namespace='cartpage')),
+>>>>>>> 313d1725625d1766b703f1af6171077c4f9b3327
 
 ]

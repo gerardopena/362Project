@@ -43,8 +43,13 @@
               <li><a href="{% url 'flights:bookpage' %}">Book</a> </li>
 
               <li><a href="#">My Trips</a></li>
+<<<<<<< HEAD
               <li><a href="#">Cart</a></li>
               <li><a href="{% url 'accounts:support' %}">Support</a></li>
+=======
+              <li><a href="{% url 'cart:cartpage' %}">Cart</a></li>
+
+>>>>>>> 313d1725625d1766b703f1af6171077c4f9b3327
               {% if user.is_authenticated %}
 
               <!-- add in drop down list links for account settings, profile picture, etc-->
