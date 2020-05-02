@@ -43,7 +43,7 @@
               <li><a href="{% url 'flights:bookpage' %}">Book</a> </li>
 
               <li><a href="#">My Trips</a></li>
-              <li><a href="#">Cart</a></li>
+              <li><a href="{% url 'cart:cartpage' %}">Cart</a></li>
 
               {% if user.is_authenticated %}
 

@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
     'flights.apps.FlightsConfig',
     'bootstrap3',
+    'cart.apps.CartConfig',
 
 ]
 

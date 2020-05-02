@@ -4,6 +4,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
 from accounts.forms import RegistrationForm, AccountUpdateForm
+#from cart.models import Order
+#from . import Account
 # Create your views here.
 
 def signup_view(request):
@@ -54,3 +56,12 @@ def account_view(request):
 	context['account_form'] = form
 
 	return render(request, 'accounts/account.html', context)
+
+""" def cart_profile(request):
+	my_user_profile = Account.objects.filter(user=request.user).first()
+	my_orders = Order.objects.filter(is_ordered=True, owner=my_user_profile)
+	context = {
+		'my_orders': my_orders
+	}
+
+	return render(request, "cartpage.html", context) """

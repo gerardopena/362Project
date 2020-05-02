@@ -27,6 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', views.LogIn.as_view(), name='login'),
     path('logout/', views.LogOut.as_view(), name='logout'),
-    path('book/', include("flights.urls", namespace="book"))
+    path('book/', include("flights.urls", namespace="book")),
+    path('cart/', include("cart.urls", namespace='cartpage')),
 
 ]
