@@ -4,7 +4,7 @@
 from django.urls import include, path
 from django.contrib.auth import views as auth_views
 from accounts.views import signup_view, account_view
-
+from . import views
 app_name='accounts'
 
 urlpatterns = [
@@ -13,4 +13,5 @@ urlpatterns = [
     path('logout/',auth_views.LogoutView.as_view(),name='logout'),
     path('signup/', signup_view, name='signup'),
     path('account/', account_view, name='account'),
+    
 ]

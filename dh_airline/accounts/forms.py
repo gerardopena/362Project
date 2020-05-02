@@ -25,7 +25,8 @@ class AccountUpdateForm(forms.ModelForm):
 			'street_address',
 			'city_address',
 			'state_address',
-			'zip_address'
+			'zip_address',
+			'profile_pic'
 			)
 
 	def clean_email(self):

@@ -1,3 +1,5 @@
+<!--kyle ear-->
+<!--brandon le-->
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
@@ -6,7 +8,7 @@
 <div class="container">
   <div class="totalresults">
     <div class="destinationheader">
-      <h1> {{ orig }} <span class="glyphicon glyphicon-plane"></span>   {{ dest }}</h1>
+      <h1>Departure: {{ orig }} <span class="glyphicon glyphicon-plane"></span>   {{ dest }}</h1>
     </div>
     <div class="resultsheader">
         <h2> Results: </h2>
@@ -16,13 +18,13 @@
           Depart
         </div>
         <div class="col-md-2">
-          Depart
+          Arrive
         </div>
         <div class="col-md-2">
-          Depart
+          Stops
         </div>
         <div class="col-md-2">
-          Depart
+          Duration
         </div>
     </div>
     {%for flight in flights %}

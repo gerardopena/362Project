@@ -5,7 +5,7 @@ from django.views.generic import View, TemplateView, ListView, CreateView, Delet
 
 class HomePage(TemplateView):
     template_name='homepage.html'
-    
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context[''] = 'text'
@@ -23,3 +23,6 @@ class LogOut(TemplateView):
 
 class BookPage(TemplateView):
     template_name = 'bookpage.html'
+
+class SupportPage(TemplateView):
+	template_name = 'support.html'
