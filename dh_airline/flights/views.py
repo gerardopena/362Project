@@ -58,8 +58,6 @@ class FlightCartView(ListView):
     context_object_name = 'flight_item'
     model = models.FlightItems
 
-
-
 class BookPage(TemplateView):
     template_name = 'bookpage.html'
 

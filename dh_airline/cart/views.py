@@ -14,6 +14,9 @@ import datetime
 
 class CartPage(TemplateView):
     template_name = 'cartpage.html'
+class PaymentPage(TemplateView):
+    template_name = 'payment.html'
+
 
 """ def get_user_pending_order(request):
     # get order for the correct user
@@ -37,7 +40,7 @@ def add_to_cart(request, **kwargs):
     # check if the user already owns this product
     #if flights in request.user.flight.origin.all():
     #    messages.info(request, 'You already own this ebook')
-    #    return redirect(reverse('products:product-list')) 
+    #    return redirect(reverse('products:product-list'))
     # create orderItem of the selected product
     order_item, status = OrderItem.objects.get_or_create(flight=flights)
     # create order associated with the user
@@ -113,7 +116,7 @@ def checkout(request, **kwargs):
                 for x in result.errors.deep_errors:
                     messages.info(request, x)
                 return redirect(reverse('shopping_cart:checkout'))
-            
+
     context = {
         'order': existing_order,
         'client_token': client_token,
@@ -132,7 +135,7 @@ def update_transaction_records(request, token):
     order_to_purchase.is_ordered=True
     order_to_purchase.date_ordered=datetime.datetime.now()
     order_to_purchase.save()
-    
+
     # get all items in the order - generates a queryset
     order_items = order_to_purchase.items.all()
 
@@ -146,7 +149,7 @@ def update_transaction_records(request, token):
     user_profile.ebooks.add(*order_products)
     user_profile.save()
 
-    
+
     # create a transaction
     transaction = Transaction(profile=request.user.profile,
                             token=token,

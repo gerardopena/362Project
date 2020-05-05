@@ -30,10 +30,11 @@ urlpatterns = [
     path('login/', views.LogIn.as_view(), name='login'),
     path('logout/', views.LogOut.as_view(), name='logout'),
     path('book/', include("flights.urls", namespace="book")),
-<<<<<<< HEAD
-
-=======
     path('cart/', include("cart.urls", namespace='cartpage')),
->>>>>>> 313d1725625d1766b703f1af6171077c4f9b3327
+    path('checkout/', views.CheckOutPage.as_view(), name = 'checkout'),
+    path('confirmation/', views.ConfirmationPage.as_view(), name = 'confirmation'),
+    path('mytrips/', views.MyTripsPage.as_view(), name = 'mytrips'),
+    path('mytripsconfirmation/', views.MyTripsConfirmation.as_view(), name = 'mytripsconfirmation'),
+    path('report/', views.ManagerReport.as_view(), name = 'managerreport')
 
 ]

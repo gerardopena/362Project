@@ -21,10 +21,10 @@
           Arrive
         </div>
         <div class="col-md-2">
-          Stops
+          Duration
         </div>
         <div class="col-md-2">
-          Duration
+          Stops
         </div>
     </div>
     {%for flight in flights %}
@@ -37,10 +37,13 @@
               {{ flight.destination }}
             </div>
               <div class="col-md-2">
-                {{ flight.duration }}
+                {{ flight.duration }} min.
               </div>
-            <div class="col-md-6">
-              <button type="Submit"  class="reservebutton" name="button"><a href="{% url 'flights:detailpage' pk=flight.id%}">Reserve</a></button>
+              <div class="col-md-2">
+                2
+              </div>
+            <div class="col-md-4">
+              <button type="Submit"  class="reservebutton" name="button"><a href="{% url 'cart:cartpage' %}"">Reserve</a></button>
 
             </div>
 
@@ -48,6 +51,7 @@
 
     </div>
         {%endfor%}
+
   </div>
 </div>
 

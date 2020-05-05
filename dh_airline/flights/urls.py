@@ -9,5 +9,5 @@ urlpatterns = [
     path('s/', views.search, name='search'),
     path('flight/<pk>/', views.FlightDetailView.as_view(), name='detailpage'),
     path('add/<pk>/', views.add_flight, name="add"),
-
+    
 ]

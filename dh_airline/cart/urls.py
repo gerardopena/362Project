@@ -1,6 +1,6 @@
 from django.urls import include, path, re_path
 from django.conf.urls import url
-
+from . import views
 from .views import (
     add_to_cart,
     order_details,
@@ -11,6 +11,7 @@ app_name = 'cart'
 
 urlpatterns = [
     path('', CartPage.as_view(), name='cartpage'),
+    path('', views.PaymentPage.as_view(),name='payment'),
     path('add-to-cart/<item_id>/', add_to_cart, name="add_to_cart"),
     url(r'^order-summary/$', order_details, name="cart_summary"),
     #url(r'^success/$', success, name='purchase_success'),

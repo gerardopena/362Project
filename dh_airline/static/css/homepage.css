@@ -8,6 +8,7 @@
   background-position: center center;
   background-attachment: fixed;
   background-color: white;
+  height: 450px;
 }
 
 #bookJumbo{
@@ -19,6 +20,8 @@
   margin-top: 50px;
   width: 550px;
   margin-bottom: 175px;
+  font-size: 40px;
+
 }
 
 #bookHeader{

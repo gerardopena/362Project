@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic import View, TemplateView, ListView, CreateView, DeleteView
 # Create your views here.
+from flights import models
 
 class HomePage(TemplateView):
     template_name='homepage.html'
@@ -26,3 +27,20 @@ class BookPage(TemplateView):
 
 class SupportPage(TemplateView):
 	template_name = 'support.html'
+
+class CheckOutPage(TemplateView):
+    template_name = 'checkout.html'
+
+class ConfirmationPage(TemplateView):
+    template_name = 'confirmation.html'
+
+class MyTripsPage(TemplateView):
+    template_name = 'myTrips.html'
+
+class MyTripsConfirmation(TemplateView):
+    template_name = "MyTripsConfirmation.html"
+
+class ManagerReport(ListView):
+    model = models.Flight
+    context_object_name = 'flights'
+    template_name = 'managerreport.html'
